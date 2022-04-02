@@ -19,22 +19,31 @@
     th,td{
       border: 1px #333 solid ;
     }
-    thead{
-      background-color: cadetblue;
-    }
-
+    thead{background-color: cadetblue; color: white;}
+    tbody{background-color: lightcyan;}
+    .line_impact{background-color: lightskyblue; height: 60px;}
     
+    .cell_01{width: 80px;}
+    .cell_02{width: 100px;}
+    /*.cell_03{width: 100px;}*/
+    .cell_04{width:400px;}
     
   </style>
 </head>
 <body>
   <h1><a href="../index.html"></a></h1>
   <h2>테이블 이해하기</h2>
-
   <table>
     <caption>테이블 구조 기본 형태 이해하기</caption>
+    <colgroup> <!--각 열에 스타일 적용하기-->
+      <col class="cell_01">
+      <col class="cell_02" span="2">
+      <!--<col class="cell_03">-->
+      <col class="cell_04">
+      <col class="cell_05">
+    </colgroup>
     <thead>
-      <tr>
+      <tr class="line_impact">
         <th>ID-No</th>
         <th>성</th>
         <th>이름</th>
@@ -42,20 +51,10 @@
         <th>작성일</th>
       </tr>
     </thead>
-    <tfoot>
-      <tr>
-        <td>tfoot-1</td>
-        <td>tfoot-2</td>
-        <td>tfoot-3</td>
-        <td>tfoot-4</td>
-        <td>tfoot-5</td>
-      </tr>
-    </tfoot>
     <tbody>
-      <tr>
+      <tr class="line_impact">
         <th>001</th>
-        <td>Mark</td>
-        <td>Octo</td>
+        <td colspan="2">Mark Octo</td>
         <td><a href="#">mark@email.com</a></td>
         <td>02.04</td>
       </tr>
@@ -66,7 +65,7 @@
         <td><a href="#">json001@email.com</a></td>
         <td>02.14</td>
       </tr>
-      <tr>
+      <tr class="line_impact">
         <th>003</th>
         <td>Larry</td>
         <td>Visualy</td>
@@ -80,12 +79,17 @@
         <td><a href="#">gray_color@email.com</a></td>
         <td>04.01</td>
       </tr>
-      <tr>
-        <th>005</th>
-        <td>Park</td>
-        <td>-</td>
+      <tr class="line_impact">
+        <th rowspan="2">005</th>
+        <td rowspan="2">Park</td>
+        <td rowspan="2">-</td>
         <td><a href="#">green@email.com</a></td>
-        <td>05.01</td>
+        <td rowspan="2">05.01</td>
+      </tr>
+      <tr>
+
+        <td ><a href="#">green2@email.com</a></td>
+        
       </tr>
     </tbody>
   </table>
