@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹기초</title>
+  <style>
+    .box_01{
+      width: 200px;
+      height: 50px;
+      background-color: #aff;
+    }
+    .box_02{
+      width: 300px;
+      height: 30px;
+      background-color: #fca;
+    }
+    ul{
+      list-style: none;
+      width: 200px; height: auto;
+      background-color: #ccc;
+    }
+    li{
+      width: 200px; height: 30px;
+    }
+    .list_01{background-color: #faa;}
+    .list_02{background-color: #aaf;}
+    
+    hr{
+      width: 500px; height: 20px;
+      background-color: #7ff;
+    }
+    .mini_group_01{
+      width: 300px;
+      height: 400px;
+      background-color: #daa /*글씨 크기만큼만 색상 적용 => inline요소*/
+    }
+    a{
+      width: 400px; height: 30px;
+      background-color: #ac7; /*글씨 크기만큼만 색상 적용 => inline요소*/
+    }
+    button{
+      width: 300px; height: 30px;
+      background-color: white;
+      border: none; /*옆으로 나열할 수 있고 크기를 가질 수 있음 => inline-block 요소*/
+    }
+    .convert_box{
+      width: 300px; height: 50px;
+      background-color: #ddd;
+    }
+
+    .convert_box>a{
+      display: inline-block;
+      width: 30%; height: 30px;
+      font-size: 0.7rem;
+    }
+    .convert_box_02{
+      /*display: none; 눈에 안보이게만 삭제*/
+      width: 500px;
+      height: 50px;
+      background-color: #acf;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1><a href="../index.html">웹기초</a></h1>
+    <h2>inline과 block의 개념</h2>
+    <div class="box_01">div는 크기를 가질 수 있는가?</div>
+    <p class="box_02">p요소는 크기를 가질 수 있는가?</p>
+    <ul>
+      <li class="list_01">list_01</li>
+      <li class="list_02">list_02</li>
+    </ul>
+    <hr>
+    <span class="mini_group_01">의미없는 작은 단위의 그룹요소</span>
+    <a href="#">link 기능을 가진 요소</a>
+
+    <hr/>
+    <button type="button">버튼은 어떠한 형태?</button>
+    <button type="button">버튼은 어떠한 형태?</button>
+    <hr/>
+    <div>결과?
+      <span>인라인 형식의 요소
+      </span>
+    </div> <!--block 요소 안에 inline 요소를 넣는건 가능, 역은 안됨-->
+    
+    <div>
+      <a href="#">
+        <div>a 내부에</div>
+        <p>설명</p>
+        <dl>
+          <dt>제목</dt>
+          <dd>내용</dd>
+        </dl>
+      </a> <!--inline 요소인 a는 block 요소들을 포함할 수 있음(예외)-->
+    </div>
+
+    <div>
+      <p>설명</p>
+    </div> <!--이건 가능-->
+
+    <p>
+      <div>상자를 삽입</div>
+    </p> <!--이건 안됨-->
+
+    <div class="convert_box">
+      <a href="#">block으로 변환</a>
+      <a href="#">block으로 변환</a>
+      <a href="#">block으로 변환</a>
+    </div>
+
+    <div class="convert_box_02">
+      Lorem ipsum dolor sit amet.
+    </div>
+    
+  </div>
+</body>
+</html>
