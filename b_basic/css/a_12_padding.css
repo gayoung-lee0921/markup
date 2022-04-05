@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*a_12_padding.css*/
+
+#wrap{
+  width: 900px; height: 2000px;
+  margin: 0 auto;
+  background-color: #eee;
+}
+.part{
+  width: 95%; height: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.part>div{
+  width: 120px; height: 120px;
+  background: #acf;
+  background-image: linear-gradient(45deg, #acf, #fda);
+  float: left;
+}
+
+.part .padding_01{
+  width: 200px; height: 200px;
+}
+.padding_02{
+  padding: 50px;
+}
+.part>.padding_03{width: 200px; height: 200px;}
+.padding_inner{
+  width: 100px; height: 100px; 
+  margin: 0 auto; /*좌우 가운데*/
+  margin-top: 50px;
+  background: #ada; color: white;}
+
+.part .padding_04{
+  width: 60px; height: 60px; /*박스 크기를 애초에 100X100으로 맞췄는데 padding을 20주면 크기가 140x140으로 늘어나니 이것을 방지하기 위해 가로세로 높이를 줄임*/
+  padding: 20px;
+}
+.padding_05{
+  padding: 20px;
+  box-sizing: content-box; /*처음에 생성된 박스 크기를 기준으로 패딩을 내부로 적용시켜라 라는 의미, 가로와 세로를 번거롭게 수정할 필요가 없어짐*/
+
+  /*box-sizing: border-box || content-box*/
+}
+/*-----------------------------------------*/
+.none{display: none;}/*눈에만 안보이게 */
+.more_p_01{padding: 20px;}
+.more_p_02{padding: 20px 40px;}
+.more_p_03{padding: 10px 20px 40px;}
+.more_p_04{padding: 20px 30px 40px 10px;}
+.more_p_05{padding-top: -150px;;} /*padding: 음수값은 없음*/
+.more_p_06{padding: 30px; padding-left: 50px;} /*전체에 패딩 적용하고 특정 부분만 다르게 값을 넣고 싶을 때(순서중요)*/
+.more_p_07{padding-top: 10px; padding-right: 20px; padding-bottom: 30px; padding-left: 50px;}
+.more_p_08{padding-left:50px; padding-left: 30px;} /*뒤에 값만 적용*/
+.more_p_09{margin: auto; padding: auto;} /*padding: auto는 없음*/
+.more_p_10{margin-top: -50px; margin-left: 100px;}
+
+/*
+margin: 사이사이에 대한 공백(공간)을 줌
+*/
