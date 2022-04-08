@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/*a_18_layout01.css*/
+
+body, h1, h2, h3, h4, h5, h6, hr{margin: 0; border: 0;}
+
+hr{
+  border-top: 1px solid black;
+}
+/*---------------------*/
+#wrap{
+  width: 100%; height: auto;
+  margin: auto; padding-bottom: 50px;
+  background-color: #eff;
+}
+.part{
+  width: 800px; height: 800px;
+  margin: auto;   margin-top: 50px;
+  background-color: #eee;
+}
+h3{
+  width: 100%; height: 25px; background-color: #acf;
+  font-size: 1.1rem; text-align: center;
+}
+.exam{
+  width: 600px; height: auto;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #fff;
+}
+.none{display: none;}
+.box_01{width: 600px; height: auto; margin: auto; margin-top: 10px;}
+.box_01>div{width: 100%; height: 200px;}
+.inner_01{background-color: #456ea2; color: #fff;}
+.inner_02{background-color: #fff9eb;}
+.inner_03{background-color: #ffcf5d;}
+
+.box_02{width: 800px; height: auto; margin: auto; margin-top: 10px;}
+.box_02:after,
+.box_02::after{content: "";display: block; width: 100%; height: 0; clear: both;}
+.box_02 > div{
+  float: left;
+  width:33.333333%; height: 600px;
+}
+
+.box_03{
+  width: 600px; height: auto;
+  margin: auto; background-color: #95d6a4;
+}
+.box_03>div{
+  width: 200px; height: 400px;
+  margin: auto;
+}
+
+.box_04{width: 600px; height: auto;}
+.box_04>div{
+  width: 100%; height: auto;
+}
+.box_04 .insert{
+  height: 200px; /*자식이 높이값을 가지면 부모는 auto로 작성해도 자연스럽게 자식의 최종 높이로 자신의 높이를 갖게됨*/
+  padding: 10px; box-sizing: border-box;
+  background-color: #f55;
+  color: #fff; font-size: 20px; 
+}
+
+.inner_01>.insert{background-color: #ffcf5d;}
+.inner_02>.insert{background-color: #db5446;}
+.inner_03>.insert{background-color: #7e94ef;}
+
+.box_04>.inner_01>.insert{color: black;}
+.box_04>.inner_02>.insert{width: 45%;}
+.box_04>.inner_03>.insert{margin: 0;}
+
+.box_05{width: 600px; height: auto;}
+.box_05:after,
+.box_05::after{content: "";display: block; width: 100%; height: 0; clear: both;}
+.box_05>div{float: left; width: 200px; height: 600px;}
+.box_05 .insert{width: 100%; height: 200px; padding: 10px; box-sizing: border-box; color: #fff; font-size: 20px;}
+.box_05 .inner_01 .insert{margin-top:200px; color: black;}
+.box_05 .inner_02 .insert{margin-top:200px ;}
+.box_05 .inner_03 .insert{margin-top: 400px;}
